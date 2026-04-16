@@ -861,31 +861,37 @@ ul, ol {
   border-radius: 50%;
 }
 
-/* Lined variant (for Talks section — matches design) */
+/* Lined variant (for Talks section — numbered items matching design) */
 .content-section__list--lined {
   border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-bottom: 32px;
+  counter-reset: talks-item;
 }
 
 .content-section__list--lined li {
-  padding: 12px 0;
+  padding: 14px 0;
   padding-left: 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
-  gap: 12px;
-  font-size: 13px;
+  gap: 20px;
+  font-size: 14px;
   color: var(--white);
+  counter-increment: talks-item;
 }
 
 .content-section__list--lined li::before {
-  content: '';
+  content: counter(talks-item, decimal-leading-zero);
   position: static;
+  width: auto;
+  height: auto;
+  border: none;
   border-radius: 0;
-  width: 14px;
-  height: 14px;
-  border: 1px solid var(--white);
   background: transparent;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  color: var(--gray);
   flex-shrink: 0;
   display: inline-block;
   top: auto;
