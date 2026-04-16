@@ -170,9 +170,18 @@ ul, ol {
   cursor: pointer;
 }
 
+.btn i {
+  font-size: 11px;
+  transition: transform var(--transition);
+}
+
 .btn:hover {
   background: var(--white);
   color: var(--black);
+}
+
+.btn:hover i {
+  transform: translateX(3px);
 }
 
 .btn--light {
@@ -379,6 +388,24 @@ ul, ol {
   width: 100%;
 }
 
+/* Language toggle (KA) */
+.header__lang {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 6px 12px;
+  margin-left: 28px;
+  transition: border-color var(--transition), background var(--transition);
+}
+
+.header__lang:hover {
+  border-color: var(--white);
+  background: rgba(255, 255, 255, 0.06);
+}
+
 /* Hamburger */
 .hamburger {
   display: none;
@@ -475,14 +502,58 @@ ul, ol {
   margin-bottom: 20px;
 }
 
+/* Divider with center dot (under BENEFIT) */
+.hero__divider {
+  position: relative;
+  width: 260px;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.25);
+  margin: 0 auto 28px;
+}
+
+.hero__divider span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: var(--white);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .hero__subtitle {
   font-size: clamp(11px, 1vw, 13px);
   font-weight: 400;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--gray-light);
   max-width: 600px;
-  margin: 0 auto 32px;
+  margin: 0 auto 40px;
+}
+
+/* Scroll indicator (vertical line + SCROLL text) */
+.hero__scroll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin: 40px auto 0;
+}
+
+.hero__scroll-line {
+  display: block;
+  width: 1px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.hero__scroll-text {
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--gray);
 }
 
 .hero__ctas {
@@ -493,13 +564,12 @@ ul, ol {
   flex-wrap: wrap;
 }
 
-/* Scrolling Ticker */
+/* Scrolling Ticker (WHITE BG per design) */
 .hero__ticker {
   width: 100%;
   overflow: hidden;
   padding: 18px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: var(--white);
   margin-top: clamp(40px, 6vw, 80px);
 }
 
@@ -513,7 +583,7 @@ ul, ol {
   font-weight: 500;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--white);
+  color: var(--black);
 }
 
 .hero__ticker-track span {
@@ -521,7 +591,7 @@ ul, ol {
 }
 
 .hero__ticker-track .dot {
-  color: var(--gray);
+  color: var(--black);
   font-size: 14px;
 }
 
