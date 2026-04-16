@@ -1107,6 +1107,16 @@ ul, ol {
   border-radius: 0;
 }
 
+/* Digital & Video uses a taller, near-square frame so the
+   subject (person on stairs) stays visible */
+#digital .content-section__media {
+  aspect-ratio: 1 / 1;
+}
+
+#digital .content-section__media img {
+  object-position: center top;
+}
+
 /* ========================================
    THE DIGITAL MEDIA (transition section — DARK bg per design)
    ======================================== */
