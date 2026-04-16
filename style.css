@@ -618,119 +618,124 @@ ul, ol {
 .hero__categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 2px;
+  gap: clamp(16px, 2vw, 32px);
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 4vw, 40px);
+  padding: 0 clamp(20px, 4vw, 60px);
 }
 
 .hero__cat-card {
-  position: relative;
-  aspect-ratio: 3/4;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
   cursor: pointer;
-  background: var(--black-card);
+  text-align: left;
 }
 
 .hero__cat-card .img-placeholder {
+  aspect-ratio: 3/4;
+  border: 1px solid rgba(255, 255, 255, 0.4);
   transition: transform var(--transition-slow);
 }
 
 .hero__cat-card:hover .img-placeholder {
-  transform: scale(1.05);
+  transform: scale(1.02);
 }
 
 .hero__cat-card__label {
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  right: 20px;
-  background: rgba(0, 0, 0, 0.7);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  padding: 12px 16px;
-  z-index: 2;
+  margin-top: 16px;
+  padding: 0;
 }
 
 .hero__cat-card__label span {
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: clamp(14px, 1.2vw, 18px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--white);
 }
 
 /* ========================================
-   SERVICE NAV (category buttons with arrows)
+   SERVICE NAV (category buttons with long up arrows)
    ======================================== */
 .service-nav {
   background: var(--black);
-  padding: 60px 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
+  padding: 40px 0 80px;
 }
 
 .service-nav__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 0;
+  gap: clamp(16px, 2vw, 32px);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 clamp(20px, 4vw, 60px);
 }
 
 .service-nav__item {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  gap: 16px;
-  padding: 24px 16px;
+  align-items: flex-start;
+  gap: 24px;
   cursor: pointer;
-  position: relative;
-  transition: background var(--transition);
-}
-
-.service-nav__item:not(:last-child)::after {
-  content: '';
-  position: absolute;
-  right: 0;
-  top: 20%;
-  height: 60%;
-  width: 1px;
-  background: rgba(255,255,255,0.1);
+  transition: opacity var(--transition);
 }
 
 .service-nav__item:hover {
-  background: rgba(255,255,255,0.03);
+  opacity: 0.85;
 }
 
+/* Long thin vertical line + upward arrow */
 .service-nav__arrow {
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 14px;
-  color: var(--gray);
-  transition: transform var(--transition), color var(--transition);
+  position: relative;
+  width: 1px;
+  height: 72px;
+  background: rgba(255, 255, 255, 0.5);
+  margin-left: 16px;
+  font-size: 0;
+  color: transparent;
+}
+
+.service-nav__arrow i {
+  display: none;
+}
+
+.service-nav__arrow::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.6);
+  border-left: 1px solid rgba(255, 255, 255, 0.6);
+  transform: translateX(-50%) rotate(45deg);
 }
 
 .service-nav__item:hover .service-nav__arrow {
-  transform: translateY(-4px);
-  color: var(--white);
+  background: var(--white);
 }
 
+.service-nav__item:hover .service-nav__arrow::before {
+  border-color: var(--white);
+}
+
+/* WHITE filled pill with BLACK text */
 .service-nav__label {
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--white);
-  padding: 10px 28px;
-  border: 1px solid rgba(255,255,255,0.25);
-  transition: border-color var(--transition), background var(--transition);
+  color: var(--black);
+  background: var(--white);
+  padding: 14px 24px;
+  transition: background var(--transition), color var(--transition);
+  align-self: stretch;
+  text-align: left;
 }
 
 .service-nav__item:hover .service-nav__label {
-  border-color: var(--white);
-  background: rgba(255,255,255,0.05);
+  background: var(--gray-lighter);
 }
 
 /* ========================================
