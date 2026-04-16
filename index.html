@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BENEFIT — Georgia's Premier Business & Lifestyle Platform</title>
+  <meta name="description" content="BENEFIT — Magazine, Events, Digital & Video, Television. Georgia's most influential business and lifestyle platform.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#" class="header__logo">BENEFIT</a>
+
+      <nav class="header__nav">
+        <a href="#magazine">Magazine</a>
+        <a href="#talks">Events</a>
+        <a href="#digital">Digital & Video</a>
+        <a href="#articles">Articles</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Nav -->
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="#magazine">Magazine</a>
+    <a href="#talks">Events</a>
+    <a href="#digital">Digital & Video</a>
+    <a href="#articles">Articles</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <h1 class="hero__title hero-enter">BENEFIT</h1>
+      <p class="hero__subtitle hero-enter hero-enter-delay-1">
+        Georgia's most influential business and lifestyle platform.<br>
+        Print, digital, events, and television.
+      </p>
+    </div>
+
+    <div class="hero__categories hero-enter hero-enter-delay-2">
+      <a href="#magazine" class="hero__cat-card">
+        <div class="img-placeholder" data-img="magazine-hero"></div>
+        <div class="hero__cat-card__overlay">
+          <span class="hero__cat-card__label">Benefit Magazine</span>
+        </div>
+      </a>
+      <a href="#talks" class="hero__cat-card">
+        <div class="img-placeholder" data-img="events-hero"></div>
+        <div class="hero__cat-card__overlay">
+          <span class="hero__cat-card__label">Events</span>
+        </div>
+      </a>
+      <a href="#digital" class="hero__cat-card">
+        <div class="img-placeholder" data-img="digital-hero"></div>
+        <div class="hero__cat-card__overlay">
+          <span class="hero__cat-card__label">Digital & Video</span>
+        </div>
+      </a>
+      <a class="hero__cat-card">
+        <div class="img-placeholder" data-img="tv-hero"></div>
+        <div class="hero__cat-card__overlay">
+          <span class="hero__cat-card__label">Television</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== SERVICE NAV ===== -->
+  <section class="service-nav">
+    <div class="container">
+      <div class="service-nav__grid">
+        <a href="#magazine" class="service-nav__item reveal">
+          <span class="service-nav__arrow"><i class="fas fa-arrow-up"></i></span>
+          <span class="service-nav__label">Benefit Magazine</span>
+        </a>
+        <a href="#talks" class="service-nav__item reveal reveal-delay-1">
+          <span class="service-nav__arrow"><i class="fas fa-arrow-up"></i></span>
+          <span class="service-nav__label">Events</span>
+        </a>
+        <a href="#digital" class="service-nav__item reveal reveal-delay-2">
+          <span class="service-nav__arrow"><i class="fas fa-arrow-up"></i></span>
+          <span class="service-nav__label">Digital & Video</span>
+        </a>
+        <a class="service-nav__item reveal reveal-delay-3">
+          <span class="service-nav__arrow"><i class="fas fa-arrow-up"></i></span>
+          <span class="service-nav__label">Television</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== WHERE YOU FIND US ===== -->
+  <section class="find-us">
+    <div class="container">
+      <div class="find-us__header reveal">
+        <h2>Where You Find Us</h2>
+      </div>
+      <div class="find-us__grid">
+        <div class="find-us__item reveal">
+          <h3>Bene Exclusive</h3>
+          <p>Luxury Fleet</p>
+        </div>
+        <div class="find-us__item reveal reveal-delay-1">
+          <h3>Tbilisi Airport</h3>
+          <p>Official Tax</p>
+        </div>
+        <div class="find-us__item reveal reveal-delay-2">
+          <h3>Hotel Chain</h3>
+          <p>5-Star & Boutique Hotels</p>
+        </div>
+        <div class="find-us__item reveal reveal-delay-3">
+          <h3>Premium Venues</h3>
+          <p>& Dining Spaces</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFIT MAGAZINE ===== -->
+  <section class="content-section" id="magazine">
+    <div class="container">
+      <div class="content-section__layout">
+        <div class="content-section__text reveal">
+          <h2 class="heading-lg content-section__title">
+            BENEFIT<br>
+            <span class="light">MAGAZINE</span>
+          </h2>
+          <p class="content-section__desc">
+            Step into luxury. Reach Georgia's most influential audience. A quarterly
+            business publication with premium print quality, exclusive editorial content,
+            and targeted distribution across luxury touchpoints in Georgia and beyond —
+            including official airport lanes, partner 5-star hotels, fine dining
+            restaurants, and distinguished premium venues.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="magazine-carousel reveal reveal-delay-2" id="magazine-carousel">
+          <div class="magazine-carousel__track">
+            <div class="magazine-carousel__slide far-prev">
+              <div class="img-placeholder" data-img="mag-1"></div>
+            </div>
+            <div class="magazine-carousel__slide prev">
+              <div class="img-placeholder" data-img="mag-2"></div>
+            </div>
+            <div class="magazine-carousel__slide active">
+              <div class="img-placeholder" data-img="mag-3"></div>
+            </div>
+            <div class="magazine-carousel__slide next">
+              <div class="img-placeholder" data-img="mag-4"></div>
+            </div>
+            <div class="magazine-carousel__slide far-next">
+              <div class="img-placeholder" data-img="mag-5"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BENEFIT TALKS ===== -->
+  <section class="content-section" id="talks">
+    <div class="container">
+      <div class="content-section__layout">
+        <div class="content-section__text reveal">
+          <h2 class="heading-lg content-section__title">
+            BENEFIT<br>
+            <span class="light">TALKS</span>
+          </h2>
+          <p class="content-section__desc">
+            Beyond print, Benefit Talks extends the platform into the physical world. A high-level
+            business event bringing together industry leaders, entrepreneurs, and premium
+            brands. It creates a space for dialogue, networking, and strategic partnerships,
+            strengthening the connection between leaders and their target audience.
+          </p>
+          <ul class="content-section__list">
+            <li>Official part of the event with speakers</li>
+            <li>Networking zone</li>
+            <li>After Party</li>
+          </ul>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="content-section__media reveal reveal-delay-2">
+          <div class="img-placeholder" data-img="talks-main"></div>
+        </div>
+      </div>
+
+      <!-- Speaker Gallery -->
+      <div class="speaker-gallery reveal">
+        <p class="speaker-gallery__header">Event Speakers</p>
+        <div class="speaker-gallery__track" id="speaker-gallery">
+          <div class="speaker-gallery__item">
+            <div class="img-placeholder" data-img="speaker-1"></div>
+            <span class="speaker-gallery__name">Alex Chikolvani</span>
+          </div>
+          <div class="speaker-gallery__item">
+            <div class="img-placeholder" data-img="speaker-2"></div>
+            <span class="speaker-gallery__name">Giorgi Pertaia</span>
+          </div>
+          <div class="speaker-gallery__item">
+            <div class="img-placeholder" data-img="speaker-3"></div>
+            <span class="speaker-gallery__name">Nino Surguladze</span>
+          </div>
+          <div class="speaker-gallery__item">
+            <div class="img-placeholder" data-img="speaker-4"></div>
+            <span class="speaker-gallery__name">Dato Turashvili</span>
+          </div>
+          <div class="speaker-gallery__item">
+            <div class="img-placeholder" data-img="speaker-5"></div>
+            <span class="speaker-gallery__name">Ana Dolidze</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DIGITAL & VIDEO ===== -->
+  <section class="content-section" id="digital">
+    <div class="container">
+      <div class="content-section__layout">
+        <div class="content-section__text reveal">
+          <h2 class="heading-lg content-section__title">
+            DIGITAL &<br>
+            <span class="light">VIDEO</span>
+          </h2>
+          <p class="content-section__desc">
+            We create high-quality visual content that elevates brand identity and
+            communicates value with clarity, elegance, and impact. From executive
+            interviews and brand documentaries to campaign videos and event
+            coverage, our production approach combines strategic
+            messaging with cinematic execution.
+          </p>
+          <a href="#" class="btn">Read More</a>
+        </div>
+        <div class="content-section__media reveal reveal-delay-2">
+          <div class="img-placeholder" data-img="digital-main"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== THE DIGITAL MEDIA ===== -->
+  <section class="digital-media-header">
+    <div class="container">
+      <h2 class="reveal">The Digital Media</h2>
+    </div>
+  </section>
+
+  <!-- ===== FEATURED ARTICLES ===== -->
+  <section class="featured-articles" id="articles">
+    <div class="container">
+      <div class="featured-articles__header reveal">
+        <h2>Featured Articles</h2>
+      </div>
+      <div class="articles-grid reveal">
+        <article class="article-card">
+          <div class="img-placeholder" data-img="article-1"></div>
+          <div class="article-card__overlay">
+            <span class="article-card__title">The Future of Luxury in Georgia</span>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="img-placeholder" data-img="article-2"></div>
+          <div class="article-card__overlay">
+            <span class="article-card__title">Inside Tbilisi's Business Scene</span>
+          </div>
+        </article>
+        <article class="article-card">
+          <div class="img-placeholder" data-img="article-3"></div>
+          <div class="article-card__overlay">
+            <span class="article-card__title">Exclusive Interview: Industry Leaders</span>
+          </div>
+        </article>
+      </div>
+      <div class="featured-articles__footer reveal">
+        <a href="#" class="link-arrow">View All Articles <span></span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA SECTION ===== -->
+  <section class="cta-section">
+    <div class="container">
+      <h2 class="cta-section__title reveal">
+        Become Part<br>Of The Ecosystem
+      </h2>
+      <p class="cta-section__desc reveal reveal-delay-1">
+        Join Georgia's most influential business and lifestyle platform.<br>
+        Reach premium audiences across print, digital, and live events.
+      </p>
+      <a href="#" class="btn reveal reveal-delay-2">
+        Media Kit <i class="fas fa-download" style="font-size: 11px;"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-section__layout">
+        <!-- Left: Info -->
+        <div class="reveal">
+          <h2 class="contact-section__title">Get in Touch<br>With Us</h2>
+          <div class="contact-section__info">
+            <p>
+              For advertising, partnership, and media inquiries<br>
+              please reach out through the form or contact us directly.
+            </p>
+            <p style="margin-top: 16px;">
+              <strong>Email:</strong> info@benefitmedia.ge<br>
+              <strong>Phone:</strong> +995 XXX XXX XXX<br>
+              <strong>Address:</strong> Tbilisi, Georgia
+            </p>
+          </div>
+          <div class="contact-section__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+
+        <!-- Right: Form -->
+        <div class="reveal reveal-delay-2">
+          <form class="contact-form" id="contact-form">
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="cf-name">Full Name</label>
+                <input type="text" id="cf-name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="contact-form__group">
+                <label for="cf-company">Company</label>
+                <input type="text" id="cf-company" name="company" placeholder="Company name">
+              </div>
+            </div>
+            <div class="contact-form__row">
+              <div class="contact-form__group">
+                <label for="cf-email">Email</label>
+                <input type="email" id="cf-email" name="email" placeholder="your@email.com" required>
+              </div>
+              <div class="contact-form__group">
+                <label for="cf-phone">Phone</label>
+                <input type="tel" id="cf-phone" name="phone" placeholder="+995 XXX XXX XXX">
+              </div>
+            </div>
+            <div class="contact-form__group">
+              <label for="cf-message">Message</label>
+              <textarea id="cf-message" name="message" placeholder="Tell us about your project or inquiry..." rows="3"></textarea>
+            </div>
+            <button type="submit" class="btn btn--dark">Send Message <i class="fas fa-arrow-right" style="font-size: 11px;"></i></button>
+          </form>
+          <div class="contact-form__success" id="form-success">
+            <i class="fas fa-check-circle"></i>
+            <p>Thank you! Your message has been sent successfully.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <span class="footer__logo">BENEFIT</span>
+      <span class="footer__copy">&copy; 2025 Benefit Media. All rights reserved.</span>
+      <div class="footer__social">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
