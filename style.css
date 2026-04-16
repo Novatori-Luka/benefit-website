@@ -18,8 +18,8 @@
   --gray-lighter: #CCCCCC;
   --white: #FFFFFF;
   --off-white: #F5F5F5;
-  --footer-bg: #E8EEF7;
-  --footer-border: #B8C8E0;
+  --footer-bg: #F4F8FE;
+  --footer-border: #DDE5F2;
 
   --font-display: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -664,12 +664,11 @@ ul, ol {
 }
 
 /* ========================================
-   WHERE YOU FIND US
+   WHERE YOU FIND US (WHITE BG per design)
    ======================================== */
 .find-us {
-  background: var(--black);
+  background: var(--white);
   padding: var(--section-pad) 0;
-  border-top: 1px solid rgba(255,255,255,0.08);
 }
 
 .find-us__header {
@@ -682,7 +681,7 @@ ul, ol {
   font-weight: 500;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: var(--gray);
+  color: var(--black);
 }
 
 .find-us__grid {
@@ -696,30 +695,32 @@ ul, ol {
 }
 
 .find-us__item h3 {
-  font-family: var(--font-display);
-  font-size: clamp(18px, 2vw, 24px);
-  letter-spacing: 0.04em;
+  font-family: var(--font-body);
+  font-size: clamp(16px, 1.4vw, 20px);
+  font-weight: 700;
+  letter-spacing: 0.02em;
   text-transform: uppercase;
-  color: var(--white);
-  line-height: 1.15;
+  color: var(--black);
+  line-height: 1.2;
   margin-bottom: 4px;
 }
 
 .find-us__item p {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
-  color: var(--gray);
+  color: var(--black);
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
 }
 
 .find-us__item::after {
   content: '';
   display: block;
-  width: 40px;
-  height: 2px;
-  background: var(--white);
-  margin-top: 16px;
+  width: 100%;
+  max-width: 220px;
+  height: 1px;
+  background: var(--black);
+  margin-top: 20px;
 }
 
 /* ========================================
@@ -1226,7 +1227,7 @@ ul, ol {
    ======================================== */
 .footer {
   background: var(--footer-bg);
-  padding: 60px 0 30px;
+  padding: 60px 0;
   border-top: 1px solid var(--footer-border);
 }
 
@@ -1235,7 +1236,6 @@ ul, ol {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
   align-items: center;
-  margin-bottom: 40px;
 }
 
 .footer__col {
@@ -1283,9 +1283,9 @@ ul, ol {
 }
 
 .footer__copy {
+  background: var(--white);
   text-align: center;
-  padding-top: 20px;
-  border-top: 1px solid var(--footer-border);
+  padding: 24px 0;
 }
 
 .footer__copy p {
