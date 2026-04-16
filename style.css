@@ -836,6 +836,14 @@ ul, ol {
   margin-bottom: 24px;
 }
 
+/* "Read More" buttons inside content sections are mixed-case per design */
+.content-section__text .btn {
+  text-transform: none;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  font-size: 14px;
+}
+
 .content-section__list {
   margin-bottom: 32px;
 }
