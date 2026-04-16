@@ -1032,12 +1032,14 @@ ul, ol {
   display: flex;
   gap: 4px;
   overflow: hidden;
+  /* Aspect on the track instead of each item — so hover only changes width */
+  aspect-ratio: 15 / 4;
 }
 
 .speaker-gallery__item {
   flex: 1 1 0;
   min-width: 0;
-  aspect-ratio: 3/4;
+  height: 100%;
   position: relative;
   overflow: hidden;
   cursor: pointer;
