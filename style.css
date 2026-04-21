@@ -967,137 +967,58 @@ ul, ol {
 }
 
 /* ========================================
-   PANORAMA SLIDER (3D gallery)
+   MAGAZINE ANIMATION GALLERY (auto-scrolling marquee)
    ======================================== */
-.panorama-slider {
-  --panorama-accent: #A38560;
-  --panorama-ease: cubic-bezier(0.25, 0.1, 0.25, 1);
+.animation-gallery {
   background: var(--black);
-  padding: 40px 0 var(--section-pad);
+  padding: 0 0 var(--section-pad);
   overflow: hidden;
-  user-select: none;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
-.panorama-slider__track {
-  position: relative;
+.animation-gallery__viewport {
   width: 100%;
-  perspective: 1100px;
-  transform-style: preserve-3d;
-  cursor: grab;
-  flex-shrink: 0;
-}
-
-.panorama-slider__track:active {
-  cursor: grabbing;
-}
-
-.panorama-slider__fade {
-  position: absolute;
-  top: 0;
-  width: 15%;
-  height: 100%;
-  z-index: 30;
-  pointer-events: none;
-}
-
-.panorama-slider__fade--left {
-  left: 0;
-  background: linear-gradient(to right, var(--black), transparent);
-}
-
-.panorama-slider__fade--right {
-  right: 0;
-  background: linear-gradient(to left, var(--black), transparent);
-}
-
-.panorama-slider__card {
-  position: absolute;
-  left: 50%;
-  top: 50%;
   overflow: hidden;
-  border-radius: 2px;
-  cursor: pointer;
-  transform-style: preserve-3d;
-  transition: transform 0.55s var(--panorama-ease), opacity 0.55s ease;
-  will-change: transform, opacity;
 }
 
-.panorama-slider__card--active {
-  cursor: grab;
+.animation-gallery__track {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  animation: animationGalleryScroll 90s linear infinite;
 }
 
-.panorama-slider--reflection .panorama-slider__card {
-  -webkit-box-reflect: below 3px -webkit-linear-gradient(transparent 58%, rgba(0, 0, 0, 0.4));
+.animation-gallery__viewport:hover .animation-gallery__track {
+  animation-play-state: paused;
 }
 
-.panorama-slider__card img {
+.animation-gallery__item {
+  flex: 0 0 auto;
+  width: clamp(220px, 20vw, 320px);
+  aspect-ratio: 3 / 4;
+  overflow: hidden;
+  position: relative;
+  transition: transform var(--transition);
+}
+
+.animation-gallery__item:hover {
+  transform: scale(1.02);
+}
+
+.animation-gallery__item video {
   width: 100%;
   height: 100%;
   object-fit: cover;
   display: block;
-  pointer-events: none;
 }
 
-.panorama-slider__dots {
-  display: flex;
-  gap: 8px;
-  align-items: center;
-  margin-top: 24px;
-  flex-shrink: 0;
-}
-
-.panorama-slider--reflection .panorama-slider__dots {
-  margin-top: 48px;
-}
-
-.panorama-slider__dot {
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background: rgba(255, 255, 255, 0.22);
-  border: none;
-  padding: 0;
-  cursor: pointer;
-  transition: width 0.3s ease, background 0.3s ease;
-}
-
-.panorama-slider__dot--active {
-  width: 22px;
-  background: var(--panorama-accent);
-}
-
-.panorama-slider__arrows {
-  display: flex;
-  gap: 12px;
-  margin-top: 20px;
-  flex-shrink: 0;
-}
-
-.panorama-slider__arrow {
-  width: 40px;
-  height: 40px;
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.18);
-  color: rgba(255, 255, 255, 0.55);
-  cursor: pointer;
-  font-size: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
-
-.panorama-slider__arrow:hover {
-  border-color: rgba(255, 255, 255, 0.6);
-  color: var(--white);
+@keyframes animationGalleryScroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .panorama-slider__card {
-    transition: opacity 0.2s ease;
+  .animation-gallery__track {
+    animation: none;
   }
 }
 
