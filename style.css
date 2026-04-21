@@ -1184,14 +1184,14 @@ ul, ol {
   border-radius: 0;
 }
 
-/* Digital & Video uses a taller, near-square frame so the
-   subject (person on stairs) stays visible */
+/* Digital & Video image is portrait 2:3 — match the frame to the
+   image so the full photo (including the reflection) is visible. */
 #digital .content-section__media {
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 2 / 3;
 }
 
 #digital .content-section__media img {
-  object-position: center top;
+  object-position: center center;
 }
 
 /* ========================================
