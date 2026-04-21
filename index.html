@@ -209,43 +209,39 @@
     </div>
   </section>
 
-  <!-- ===== MAGAZINE GALLERY (auto-scrolling marquee) ===== -->
-  <section class="magazine-gallery">
-    <div class="magazine-gallery__viewport">
-      <div class="magazine-gallery__track">
-        <!-- 15 photos, duplicated for seamless infinite loop -->
-        <div class="magazine-gallery__item"><img src="assets/slider-01.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-02.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-03.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-04.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-05.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-06.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-07.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-08.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-09.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-10.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-11.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-12.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-13.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-14.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item"><img src="assets/slider-15.jpg" alt="" loading="lazy"></div>
-        <!-- Duplicated set for seamless loop -->
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-01.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-02.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-03.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-04.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-05.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-06.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-07.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-08.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-09.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-10.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-11.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-12.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-13.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-14.jpg" alt="" loading="lazy"></div>
-        <div class="magazine-gallery__item" aria-hidden="true"><img src="assets/slider-15.jpg" alt="" loading="lazy"></div>
+  <!-- ===== PANORAMA SLIDER (3D gallery) ===== -->
+  <section class="panorama-slider" id="panorama-slider"
+           data-aspect="3/4"
+           data-reflection="true"
+           data-arrows="true"
+           data-dots="true"
+           data-autoplay="false"
+           data-autoplay-interval="3000">
+    <div class="panorama-slider__track">
+      <div class="panorama-slider__fade panorama-slider__fade--left"></div>
+      <div class="panorama-slider__fade panorama-slider__fade--right"></div>
+      <div class="panorama-slider__stage">
+        <div class="panorama-slider__card"><img src="assets/slider-01.jpg" alt="Slide 1" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-02.jpg" alt="Slide 2" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-03.jpg" alt="Slide 3" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-04.jpg" alt="Slide 4" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-05.jpg" alt="Slide 5" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-06.jpg" alt="Slide 6" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-07.jpg" alt="Slide 7" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-08.jpg" alt="Slide 8" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-09.jpg" alt="Slide 9" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-10.jpg" alt="Slide 10" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-11.jpg" alt="Slide 11" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-12.jpg" alt="Slide 12" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-13.jpg" alt="Slide 13" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-14.jpg" alt="Slide 14" loading="lazy" draggable="false"></div>
+        <div class="panorama-slider__card"><img src="assets/slider-15.jpg" alt="Slide 15" loading="lazy" draggable="false"></div>
       </div>
+    </div>
+    <div class="panorama-slider__dots" aria-hidden="true"></div>
+    <div class="panorama-slider__arrows">
+      <button type="button" class="panorama-slider__arrow" data-dir="-1" aria-label="Previous slide">&larr;</button>
+      <button type="button" class="panorama-slider__arrow" data-dir="1" aria-label="Next slide">&rarr;</button>
     </div>
   </section>
 
