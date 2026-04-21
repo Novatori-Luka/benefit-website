@@ -632,7 +632,7 @@ ul, ol {
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  text-align: left;
+  text-align: center;
 }
 
 .hero__cat-card .img-placeholder {
