@@ -612,20 +612,16 @@ ul, ol {
   color: var(--white);
 }
 
-/* Hero Category Cards */
+/* Hero Category Cards — wrapped in a .container for symmetric centering */
+.hero__categories-container {
+  padding-bottom: clamp(60px, 8vw, 120px);
+}
+
 .hero__categories {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: clamp(16px, 2vw, 32px);
   width: 100%;
-  max-width: 1400px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 0;
-  padding-left: clamp(20px, 4vw, 60px);
-  padding-right: clamp(20px, 4vw, 60px);
-  padding-bottom: clamp(60px, 8vw, 120px);
-  box-sizing: border-box;
 }
 
 .hero__cat-card {
@@ -1619,7 +1615,9 @@ ul, ol {
 
   .hero__categories {
     grid-template-columns: repeat(2, 1fr);
-    max-width: 700px;
+  }
+  .hero__categories-container {
+    max-width: 720px;
   }
 
   .service-nav__grid {
