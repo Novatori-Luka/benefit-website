@@ -170,8 +170,7 @@
   const panorama = document.getElementById('panorama-slider');
   if (panorama) {
     const track = panorama.querySelector('.panorama-slider__track');
-    const stage = panorama.querySelector('.panorama-slider__stage');
-    const cards = Array.from(stage.querySelectorAll('.panorama-slider__card'));
+    const cards = Array.from(track.querySelectorAll('.panorama-slider__card'));
     const dotsEl = panorama.querySelector('.panorama-slider__dots');
     const arrowBtns = panorama.querySelectorAll('.panorama-slider__arrow');
 

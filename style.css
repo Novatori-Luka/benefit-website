@@ -985,18 +985,13 @@ ul, ol {
   position: relative;
   width: 100%;
   perspective: 1100px;
+  transform-style: preserve-3d;
   cursor: grab;
   flex-shrink: 0;
 }
 
 .panorama-slider__track:active {
   cursor: grabbing;
-}
-
-.panorama-slider__stage {
-  position: relative;
-  width: 100%;
-  height: 100%;
 }
 
 .panorama-slider__fade {
