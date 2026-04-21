@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BENEFIT — Admin</title>
+  <link rel="stylesheet" href="assets/admin/admin.css">
+</head>
+<body>
+
+  <!-- ===== LOGIN ===== -->
+  <section class="login" id="login-view">
+    <form class="login__box" id="login-form">
+      <h1 class="login__logo">BENEFIT</h1>
+      <p class="login__subtitle">Admin Panel</p>
+      <label>Email
+        <input type="email" id="login-email" required autocomplete="email">
+      </label>
+      <label>Password
+        <input type="password" id="login-password" required autocomplete="current-password">
+      </label>
+      <button type="submit" class="btn-primary">Sign in</button>
+      <p class="login__error" id="login-error"></p>
+    </form>
+  </section>
+
+  <!-- ===== ADMIN SHELL ===== -->
+  <div class="admin" id="admin-view" hidden>
+    <aside class="admin__sidebar">
+      <div class="admin__brand">BENEFIT <span>/ Admin</span></div>
+      <nav class="admin__nav">
+        <button class="admin__nav-btn is-active" data-tab="speakers">Event Speakers</button>
+        <button class="admin__nav-btn" data-tab="blog_posts">Blog Posts</button>
+        <button class="admin__nav-btn" data-tab="gallery_photos">Gallery Photos</button>
+        <button class="admin__nav-btn" data-tab="events">Events</button>
+        <button class="admin__nav-btn" data-tab="partners">Partners</button>
+        <button class="admin__nav-btn" data-tab="magazine_issues">Magazine Issues</button>
+        <button class="admin__nav-btn" data-tab="site_settings">Site Settings</button>
+      </nav>
+      <div class="admin__user">
+        <span id="admin-user-email"></span>
+        <button id="logout-btn" class="btn-text">Log out</button>
+      </div>
+    </aside>
+
+    <main class="admin__main">
+      <header class="admin__header">
+        <h2 id="tab-title">Event Speakers</h2>
+        <button id="new-btn" class="btn-primary">+ New</button>
+      </header>
+
+      <div id="list-view" class="admin__list"></div>
+
+      <!-- Edit modal -->
+      <div class="modal" id="edit-modal" hidden>
+        <div class="modal__box">
+          <header class="modal__header">
+            <h3 id="modal-title">Edit</h3>
+            <button class="modal__close" id="modal-close">&times;</button>
+          </header>
+          <form id="edit-form" class="modal__form"></form>
+          <footer class="modal__footer">
+            <button class="btn-text" id="modal-cancel">Cancel</button>
+            <button class="btn-primary" id="modal-save">Save</button>
+          </footer>
+        </div>
+      </div>
+
+      <div id="toast" class="toast" hidden></div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/admin/admin.js"></script>
+</body>
+</html>
