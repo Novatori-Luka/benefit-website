@@ -167,8 +167,14 @@
   }
 
   // ── Panorama Slider (3D gallery) ──
-  const panorama = document.getElementById('panorama-slider');
-  if (panorama) {
+  // Exposed globally so public-content.js can re-initialize after
+  // replacing the cards with Supabase data. Calling it twice is safe:
+  // the second call skips work if the panorama is already initialized
+  // on the current card set.
+  window.initPanoramaSlider = function () {
+    const panorama = document.getElementById('panorama-slider');
+    if (!panorama || panorama.dataset.initialized === 'true') return;
+
     const track = panorama.querySelector('.panorama-slider__track');
     const cards = Array.from(track.querySelectorAll('.panorama-slider__card'));
     const dotsEl = panorama.querySelector('.panorama-slider__dots');
@@ -302,7 +308,16 @@
     ro.observe(track);
     measure();
     startAuto();
-  }
+
+    panorama.dataset.initialized = 'true';
+  };
+
+  // Fallback auto-init: if public-content.js doesn't run, still init the
+  // panorama on page load with the hardcoded cards.
+  setTimeout(() => {
+    const panorama = document.getElementById('panorama-slider');
+    if (panorama && !panorama.dataset.initialized) window.initPanoramaSlider();
+  }, 2000);
 
   // ── Contact Form (Demo) ──
   const contactForm = document.getElementById('contact-form');
