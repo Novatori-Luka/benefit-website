@@ -475,13 +475,11 @@ ul, ol {
    HERO
    ======================================== */
 .hero {
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   padding-top: calc(var(--header-h) + 20px);
-  padding-bottom: 40px;
+  padding-bottom: 0;
   background: var(--black);
   text-align: center;
   position: relative;
@@ -622,7 +620,7 @@ ul, ol {
   width: 100%;
   max-width: 1400px;
   margin: 0 auto;
-  padding: 0 clamp(20px, 4vw, 60px);
+  padding: 0 clamp(20px, 4vw, 60px) clamp(60px, 8vw, 120px);
 }
 
 .hero__cat-card {
