@@ -52,6 +52,8 @@ label > input, label > textarea, label > select { margin-top: 6px; }
 
 img { max-width: 100%; display: block; }
 
+[hidden] { display: none !important; }
+
 /* ---------- Buttons ---------- */
 .btn-primary {
   display: inline-flex;
