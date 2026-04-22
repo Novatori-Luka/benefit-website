@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog — BENEFIT</title>
+  <meta name="description" content="Stories, interviews, and insight from Georgia's premium business and lifestyle platform — BENEFIT.">
+  <link rel="canonical" href="https://benefit-website.vercel.app/blog">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="BENEFIT">
+  <meta property="og:title" content="Blog — BENEFIT">
+  <meta property="og:description" content="Stories, interviews, and insight from Georgia's premium business and lifestyle platform.">
+  <meta property="og:url" content="https://benefit-website.vercel.app/blog">
+
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://czwrwzzcygvuizicjuxe.supabase.co" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "BENEFIT Blog",
+    "url": "https://benefit-website.vercel.app/blog",
+    "publisher": { "@type": "Organization", "name": "BENEFIT" }
+  }
+  </script>
+</head>
+<body class="post-body">
+
+  <header class="header" id="header">
+    <div class="container">
+      <a href="/" class="header__logo">BENEFIT</a>
+      <nav class="header__nav">
+        <a href="/#magazine">Magazine</a>
+        <a href="/#talks">Events</a>
+        <a href="/#digital">Digital</a>
+        <a href="/blog" class="is-active">Blog</a>
+        <a href="/#partners">Partners</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <a href="/" class="header__lang" aria-label="Language">KA</a>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <nav class="mobile-nav" id="mobile-nav">
+    <a href="/#magazine">Magazine</a>
+    <a href="/#talks">Events</a>
+    <a href="/#digital">Digital</a>
+    <a href="/blog">Blog</a>
+    <a href="/#partners">Partners</a>
+    <a href="/#contact">Contact</a>
+  </nav>
+
+  <main class="blog-page">
+    <div class="container">
+      <header class="blog-page__header">
+        <p class="blog-page__kicker">BENEFIT JOURNAL</p>
+        <h1 class="blog-page__title">Blog</h1>
+        <p class="blog-page__subtitle">Stories, interviews, and insight from Georgia's premium business and lifestyle platform.</p>
+      </header>
+
+      <div class="blog-filters" id="blog-filters" aria-label="Filter posts by category"></div>
+
+      <div class="blog-grid" id="blog-grid">
+        <div class="blog-grid__empty">Loading posts…</div>
+      </div>
+
+      <div class="blog-pagination" id="blog-pagination"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col footer__col--logo"><span class="footer__logo">BENEFIT</span></div>
+        <div class="footer__col footer__col--social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+          <a href="#" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+        </div>
+        <div class="footer__col footer__col--contact">
+          <p>anasulaberidze@bene-exclusive.com</p>
+          <p>Tel: (+995) 555 63 52 52</p>
+          <p>Petre Kavtaradze St, T'bilisi 0186</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <div class="footer__copy"><p>&copy; 2026 by Bene Creative</p></div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="assets/js/supabase-client.js"></script>
+  <script src="assets/js/blog-list.js"></script>
+</body>
+</html>

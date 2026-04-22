@@ -57,22 +57,30 @@
     const grid = document.querySelector('#articles .articles-grid');
     if (!grid) return;
     const { data, error } = await sb.from('blog_posts')
-      .select('*')
+      .select('title,slug,cover_url,cover_alt,category,excerpt')
       .eq('published', true)
       .order('published_at', { ascending: false })
-      .limit(6);
+      .limit(3);
     if (error || !data || !data.length) return;
 
-    grid.innerHTML = data.map(post => `
-      <article class="article-card">
+    grid.innerHTML = data.map(post => {
+      const href = post.slug ? `/blog/${encodeURIComponent(post.slug)}` : '#';
+      const alt = post.cover_alt || post.title || '';
+      return `
+      <a class="article-card" href="${attr(href)}">
         <div class="img-placeholder">
-          ${post.cover_url ? `<img src="${attr(post.cover_url)}" alt="${attr(post.title)}" loading="lazy">` : ''}
+          ${post.cover_url ? `<img src="${attr(post.cover_url)}" alt="${attr(alt)}" loading="lazy">` : ''}
         </div>
         <div class="article-card__overlay">
           <span class="article-card__title">${esc(post.title)}</span>
         </div>
-      </article>
-    `).join('');
+      </a>
+    `;
+    }).join('');
+
+    // "View all" footer link
+    const footerLink = document.querySelector('.featured-articles__footer .link-arrow');
+    if (footerLink) footerLink.setAttribute('href', '/blog');
   }
 
   // ---------- Partners ----------
