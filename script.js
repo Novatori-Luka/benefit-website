@@ -346,4 +346,62 @@
     });
   }
 
+  // ── Scroll-driven video ──
+  const scrollVideoSection = document.getElementById('scroll-video');
+  const scrollVideo = scrollVideoSection ? scrollVideoSection.querySelector('.scroll-video__media') : null;
+  const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (scrollVideoSection && scrollVideo && !reducedMotion) {
+    let duration = 0;
+    let targetTime = 0;
+    let currentTime = 0;
+    let rafId = null;
+
+    // Video must be loaded enough to know its duration and allow seeking.
+    const onMeta = () => {
+      duration = scrollVideo.duration || 0;
+      update();
+    };
+    if (scrollVideo.readyState >= 1) onMeta();
+    else scrollVideo.addEventListener('loadedmetadata', onMeta, { once: true });
+
+    // Force it to stay paused — we drive currentTime manually.
+    scrollVideo.pause();
+    scrollVideo.addEventListener('play', () => scrollVideo.pause());
+
+    function computeProgress() {
+      const rect = scrollVideoSection.getBoundingClientRect();
+      const viewportH = window.innerHeight;
+      // Progress = 0 when the section top hits the top of the viewport,
+      // and 1 when the section has scrolled its full extra height past.
+      const scrolled = -rect.top;
+      const total = rect.height - viewportH;
+      if (total <= 0) return 0;
+      return Math.max(0, Math.min(1, scrolled / total));
+    }
+
+    function tick() {
+      // Smooth out the playback so big scroll jumps don't cause jarring seeks.
+      currentTime += (targetTime - currentTime) * 0.18;
+      if (Math.abs(targetTime - currentTime) < 0.005) {
+        currentTime = targetTime;
+        rafId = null;
+      } else {
+        rafId = requestAnimationFrame(tick);
+      }
+      try {
+        scrollVideo.currentTime = currentTime;
+      } catch (_) { /* ignore seek errors during load */ }
+    }
+
+    function update() {
+      if (!duration) return;
+      targetTime = computeProgress() * duration;
+      if (rafId == null) rafId = requestAnimationFrame(tick);
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    window.addEventListener('resize', update, { passive: true });
+  }
+
 })();

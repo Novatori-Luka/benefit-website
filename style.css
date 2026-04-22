@@ -1100,6 +1100,48 @@ ul, ol {
   }
 }
 
+/* ===== Scroll-driven Video ===== */
+.scroll-video {
+  position: relative;
+  width: 100%;
+  background: var(--black);
+  /* Outer track height controls how much scroll drives the clip.
+     ~250vh = roughly 1.5 viewports of scroll beyond the sticky frame. */
+  height: 250vh;
+}
+
+.scroll-video__sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scroll-video__media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scroll-video {
+    height: auto;
+  }
+  .scroll-video__sticky {
+    position: relative;
+    height: auto;
+  }
+  .scroll-video__media {
+    height: auto;
+  }
+}
+
 /* Speaker Gallery */
 .speaker-gallery {
   margin-top: 60px;
